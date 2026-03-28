@@ -17,6 +17,7 @@ body {
 /* Page background wrapper */
 .wrapper {
   min-height: 100vh; /* full screen height */
+   padding-bottom: 200px; /* area down */
 
   /* Gradient background */
   background: linear-gradient(
