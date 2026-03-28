@@ -1,74 +1,102 @@
+/* Importing font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
-/* Сброс */
+/* Reset styles (removes default browser spacing) */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* База */
+/* Base styles */
 body {
   font-family: 'Roboto Mono', monospace;
   color: #fff;
 }
 
-/* Фон */
+/* Page background wrapper */
 .wrapper {
-  min-height: 100vh;
-  background: linear-gradient(90deg, rgba(44,155,42,1) 0%, rgba(94,166,143,1) 26%, rgba(87,199,133,1) 50%, rgba(237,221,83,1) 100%);
+  min-height: 100vh; /* full screen height */
+
+  /* Gradient background */
+  background: linear-gradient(
+    90deg,
+    rgba(44,155,42,1) 0%,
+    rgba(94,166,143,1) 26%,
+    rgba(87,199,133,1) 50%,
+    rgba(237,221,83,1) 100%
+  );
 }
 
-/* Контейнер */
+/* Main container (centers content) */
 .container {
   width: 90%;
   max-width: 1000px;
+
+  /* This centers block horizontally */
   margin: 0 auto;
 }
 
-/* Хедер */
+/* Header layout */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: flex; /* enables flexbox */
+  justify-content: space-between; /* logo left, nav right */
+  align-items: center; /* vertical alignment */
   padding: 20px 0;
 }
 
+/* Logo styling */
 .logo {
   font-size: 20px;
   font-weight: bold;
 }
 
+/* Navigation list */
 nav ul {
-  display: flex;
-  gap: 20px;
-  list-style: none;
+  display: flex; /* horizontal menu */
+  gap: 20px; /* space between items */
+  list-style: none; /* removes bullets */
 }
 
-/* Hero */
+/* Hero section */
 .hero {
   margin-top: 80px;
+
+  /* 👉 ADD THIS to center text */
+  text-align: center;
 }
 
+/* Main title */
 .hero h1 {
   font-size: 36px;
   margin-bottom: 10px;
 }
 
+/* Subtitle */
 .hero p {
   font-size: 18px;
 }
 
-/* Блоки */
+/* Content blocks */
 .block {
-  margin-top: 60px;
+  margin-top: 99px; 
+  /* 👉 ADD THIS if you want centered text */
+ /* text-align: center; */ 
 }
 
+/* Section titles */
 .block h2 {
   font-size: 28px;
   margin-bottom: 10px;
 }
 
+/* Paragraph text */
 .block p {
-  font-size: 16px;
+  font-size: 18px;
+}
+.formula {
+  font-style: italic;
+  text-align: center;
+  margin: 15px 0;
+  font-size: 24px;
 }
