@@ -7,6 +7,8 @@
 
   <!-- Linking external CSS file -->
   <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet"  href="css/stylecubic.css">
+      <script type="module" src="js/cubic.js"></script>
 </head>
 
 <!-- Main page wrapper -->
@@ -72,7 +74,7 @@
       <div class="formula"> 
         P(n)=10, n∈[1,10]        
       </div>
-      <img src="images/rrhyegpteduueqqw4ohla5c-jvg.gif" alt="Гистограмма распределения"class="img-graph"
+   <!   <img src="images/rrhyegpteduueqqw4ohla5c-jvg.gif" alt="Гистограмма распределения"class="img-graph" >
     <p>Это свидетельствует о систематическом отклонении от равномерного распределения.</p>
 
 </section>
@@ -151,6 +153,16 @@
           <p>где:</p>
           <p>X — текущее значение</p>
           <p>a,c,m — параметры генератора</p>
+           <p>Нажми, чтобы сгенерировать псевдослучайное число:</p>
+           <button onclick="showRandom('output')">Сгенерировать</button>
+            <pre id="output"></pre>
+          <!-- Делаем функцию глобальной -->
+          <script type="module">
+          import { showRandom } from './js/cubic.js';
+          window.showRandom = showRandom;
+            </script>
+
+
             <p class="spacer"></p>
 
             <p1>Свойства псевдослучайности:</p1>
