@@ -1,6 +1,6 @@
 <div align="center">
 
-diff
+```diff
 + █   █  █████  █       ████   ███   █   █  █████
 + █   █  █      █      █    █ █   █  ██ ██  █    
 + █   █  ████   █      █      █   █  █ █ █  ████ 
@@ -20,5 +20,5 @@ diff
 
 ### 🔮 Invoke the power:
 ```
-```git clone https://github.com/Dark-Lord777/Site```
+### git clone https://github.com/Dark-Lord777/Site ###
 
