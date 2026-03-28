@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+/* Сброс */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* База */
+body {
+  font-family: 'Roboto Mono', monospace;
+  color: #fff;
+}
+
+/* Фон */
+.wrapper {
+  min-height: 100vh;
+  background: linear-gradient(90deg, rgba(44,155,42,1) 0%, rgba(94,166,143,1) 26%, rgba(87,199,133,1) 50%, rgba(237,221,83,1) 100%);
+}
+
+/* Контейнер */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Хедер */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+/* Hero */
+.hero {
+  margin-top: 80px;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+}
+
+/* Блоки */
+.block {
+  margin-top: 60px;
+}
+
+.block h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.block p {
+  font-size: 16px;
+}
