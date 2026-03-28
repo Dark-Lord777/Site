@@ -94,9 +94,33 @@ nav ul {
 .block p {
   font-size: 18px;
 }
+.block p1 {
+  font-size: 27px;
+}
 .formula {
   font-style: italic;
   text-align: center;
   margin: 15px 0;
   font-size: 24px;
+}
+
+.quote {
+  text-align: center;   /* center text */
+  font-style: italic;   /* italic text */
+  margin: 20px 0;
+  font-size: 18px;
+}
+
+/* adds quotes automatically */
+.quote::before {
+  content: "“";
+}
+
+.quote::after {
+  content: "”";
+}
+.spacer {
+  height: 20px; /* высота “пустой строки” */
+  margin: 0;    /* убираем стандартные отступы */
+
 }
