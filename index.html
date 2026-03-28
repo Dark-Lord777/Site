@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8"> <!-- Defines encoding (important for Russian text) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes site responsive -->
   <title>Случайность</title>
+
+  <!-- Linking external CSS file -->
   <link rel="stylesheet" href="css/main.css">
 </head>
 
+<!-- Main page wrapper -->
 <body class="wrapper">
 
+<!-- Header (top navigation area) -->
 <header class="container">
+  
+  <!-- Logo / site name -->
   <span class="logo">Random</span>
+
+  <!-- Navigation menu -->
   <nav>
     <ul>
       <li>Главная</li>
@@ -19,28 +27,60 @@
       <li>Квантовая</li>
     </ul>
   </nav>
+
 </header>
 
+<!-- Hero section (main intro block) -->
 <section class="hero container">
   <div class="hero-info">
-    <h1>Случайность — это не так просто</h1>
+
+    <!-- Main title -->
+    <h1>СЛУЧАЙНОСТЬ КАК МНОГОУРОВНЕВОЕ ЯВЛЕНИЕ:</h1>
+
+    <!-- Subtitle / description -->
     <p>Почему люди выбирают число 7 и существует ли настоящий рандом?</p>
+
   </div>
 </section>
 
+<!-- Content block -->
 <section class="block container">
-  <h2>Психология</h2>
-  <p>Люди не выбирают случайные числа случайно. Наш мозг избегает очевидных и симметричных вариантов.</p>
+  <h2>Введение</h2>
+       <p>
+    Случайность (randomness) традиционно воспринимается как отсутствие закономерности. 
+    Однако в современной науке это понятие является значительно более сложным и многослойным. 
+    Оно затрагивает такие области, как когнитивная психология, классическая механика, теория вероятностей и квантовая физика.
+  </p>
+
+  <p>
+    Формально случайность можно определить как процесс, результат которого невозможно точно предсказать при наличии полной информации о системе. 
+    Однако это определение оказывается недостаточным при рассмотрении реальных систем.
+  </p>
+
 </section>
 
+<!-- Content block -->
 <section class="block container">
-  <h2>Физика</h2>
-  <p>Подбрасывание монетки — это сложный физический процесс, а не чистый рандом.</p>
+  <h2>Психологическая случайность</h2>
+  <p>Экспериментальные наблюдения</p>
+   <p>В ряде исследований (включая работы 1970-х годов) испытуемым предлагалось выбрать «случайное» число из заданного диапазона (например, от 1 до 10).
+      </p>
+    <p>Распределение оказалось неравномерным:</p>
+
+      <div class="formula">P(7)≈0.25−0.35</div>
+    <p>при том, что при истинной случайности:</p>
+      <div class="formula"> 
+        P(n)=10, n∈[1,10]        
+      </div>
+    <p>Это свидетельствует о систематическом отклонении от равномерного распределения.</p>
 </section>
 
+<!-- Content block -->
 <section class="block container">
   <h2>Квантовая механика</h2>
   <p>Настоящая случайность появляется только на квантовом уровне.</p>
+  <p>--</p>
+
 </section>
 
 </body>
