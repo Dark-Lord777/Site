@@ -10,267 +10,441 @@
   <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet"  href="css/stylecubic.css">
     <link rel="stylesheet"  href="css/effectscroll.css">
-    <link rel="stylesheet"  href="css/fortuna.css">
+    <<link rel="stylesheet" href="fortune/main.css">    
       <script type="module" src="js/cubic.js"></script>
     <script type="module" src="js/effectscroll.js"></script>
     <script type="module" src="js/fortuna.js"></script>
+    <script type="module" src="fortune/Winwheel.js"></script>
+
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+
+
 
 </head>
 
 <!-- Main page wrapper -->
 <body class="wrapper">
 
-<!-- Header (top navigation area) -->
-  <header>
-      <div class="container"> 
-      </div>
-  
-  <!-- Logo / site name -->
-  <span class="logo">Random</span>
-    
-    <!-- Navigation menu -->
-  <nav>
-    <ul>
-      <li><a href="#main">Главная</a></li>
-      <li><a href="#psy">Психология</a></li>
-      <li><a href="#fiz">Физика</a></li>
-      <li><a href="#pseudorandom">Псевдослучайность</a></li>
-      <li><a href="#quant">Квантовая</a></li>
-      
-    </ul>
-  </nav>
-
-</header>
-
-        <section id="main"></section>
-<!-- Hero section (main intro block) -->
-<section class="hero container">
-  <div class="hero-info">
-
-    <!-- Main title -->
-    <h1>СЛУЧАЙНОСТЬ КАК МНОГОУРОВНЕВОЕ ЯВЛЕНИЕ:</h1>
-
-    <!-- Subtitle / description -->
-    <p>Почему люди выбирают число 7 и существует ли настоящий рандом?</p>
-
-  </div>
-</section>
-
-<!-- Content block -->
-<section class="block container">
-
-  <h2>Введение</h2>
-       <p>
-    Случайность (randomness) традиционно воспринимается как отсутствие закономерности. 
-    Однако в современной науке это понятие является значительно более сложным и многослойным. 
-    Оно затрагивает такие области, как когнитивная психология, классическая механика, теория вероятностей и квантовая физика.
-  </p>
-
-  <p>
-    Формально случайность можно определить как процесс, результат которого невозможно точно предсказать при наличии полной информации о системе. 
-    Однако это определение оказывается недостаточным при рассмотрении реальных систем.
-  </p>
-
-</section>
-
-  <section id="psy"></section>
-<!-- Content block -->
-<section class="block container">
-    <h2>Психологическая случайность</h2>
-  <p1>Экспериментальные наблюдения</p1>
-   <p>В ряде исследований (включая работы 1970-х годов) испытуемым предлагалось выбрать «случайное» число из заданного диапазона (например, от 1 до 10).
-      </p>
-    <p>Распределение оказалось неравномерным:</p>
-
-      <div class="formula">P(7)≈0.25−0.35</div>
-    <p>при том, что при истинной случайности:</p>
-      <div class="formula"> 
-        P(n)=10, n∈[1,10]        
-      </div>
-     <img src="images/rrhyegpteduueqqw4ohla5c-jvg.gif" alt="Гистограмма распределения"class="img-graph">
-    <p>Это свидетельствует о систематическом отклонении от равномерного распределения.</p>
-
-</section>
-
-<!-- Content block -->
-<section class="block container">
-  <p1>Когнитивные механизмы</p1>
-  <p>Настоящая случайность появляется только на квантовом уровне.</p>
-  <p>Человеческий мозг стремится избегать:</p>
-    <p>* крайних значений (1, 10)</p>
-    <p>* симметричных структур</p>
-    <p>* повторяющихся шаблонов</p>
-  <p>Можно условно описать «психологическую случайность» функцией:</p>
-      <div class="formula">
-        Random(n)=f(n,C,B)
-      </div>
-  <p>где:</p>
-      <p>n — выбранное число</p>
-      <p>C — культурные факторы</p>
-      <p>B — когнитивные искажения</p>
-  <p>Таким образом, выбор не является случайным, а представляет собой псевдослучайный процесс с сильным смещением.</p> 
-     </section>
-
-  <section id="fiz"></section>
- <section class="block container">
-       
-  <h2>Классическая физика и детерминизм</h2>  
-        <p1>Модель подбрасывания монеты</p1>
-        <p>Подбрасывание монеты часто рассматривается как пример случайности.</p>
-        <p>Однако физически это детерминированная система.</p>
-      <p>Движение монеты можно описать через уравнения:</p>
-      <div class="formula">
-        F=ma      
-      </div>
-      <div class="formula">
-        τ=Iα        
-      </div>
-      <p>где:</p>
-      <p>F — сила</p>
-      <p>τ — момент силы</p>
-      <p>I — момент инерции</p>
-      <p>α — угловое ускорение</p>
-      <p>Итоговое состояние зависит от начальных условий:</p>
-      <div class="formula">
-        Sfinal=f(v0,ω0,h,θ,t)        
-      </div>
-      <p>Если все параметры известны, результат можно предсказать.</p>
-</section>
-    <section>
-      <section class="block container">
-        <p1>Детерминизм</p1>
-        <p>Классическая механика утверждает:</p>
-        <div class="quote">
-         при полном знании начальных условий 
-          будущее системы полностью определено          
+  <!-- Header (top navigation area) -->
+    <header>
+        <div class="container"> 
         </div>
-       <p>Это можно выразить как:</p>
-        <div class="formula">
-          X(t)=F(X0,t)
-         </div>
-        <p>где:</p>
-        <p>X — начальное состояние</p>
-        <p>X(t) — состояние в момент времени</p>
-        <p>Следовательно, случайность в макромире — это следствие неполного знания, а не фундаментальное свойство.</p>
-         
-    </section>
+    
+    <!-- Logo / site name -->
+    <span class="logo">Random</span>
+      
+      <!-- Navigation menu -->
+    <nav>
+    <ul>
+        <li><a href="#main">Главная</a></li>
+        <li><a href="#psy">Психология</a></li>
+        <li><a href="#fiz">Физика</a></li>
+        <li><a href="#pseudorandom">Псевдослучайность</a></li>
+        <li><a href="#quant">Квантовая</a></li>
+        
+      </ul>
+    </nav>
 
-  <section id="pseudorandom"></section>
+  </header>
+
+          <section id="main"></section>
+  <!-- Hero section (main intro block) -->
+  <section class="hero container">
+    <div class="hero-info">
+
+      <!-- Main title -->
+      <h1>СЛУЧАЙНОСТЬ КАК МНОГОУРОВНЕВОЕ ЯВЛЕНИЕ:</h1>
+
+      <!-- Subtitle / description -->
+      <p>Почему люди выбирают число 7 и существует ли настоящий рандом?</p>
+
+    </div>
+  </section>
+
+  <!-- Content block -->
+  <section class="block container">
+
+    <h2>Введение</h2>
+        <p>
+      Случайность (randomness) традиционно воспринимается как отсутствие закономерности. 
+      Однако в современной науке это понятие является значительно более сложным и многослойным. 
+      Оно затрагивает такие области, как когнитивная психология, классическая механика, теория вероятностей и квантовая физика.
+    </p>
+
+    <p>
+      Формально случайность можно определить как процесс, результат которого невозможно точно предсказать при наличии полной информации о системе. 
+      Однако это определение оказывается недостаточным при рассмотрении реальных систем.
+    </p>
+
+  </section>
+
+    <section id="psy"></section>
+  <!-- Content block -->
+  <section class="block container">
+      <h2>Психологическая случайность</h2>
+    <p1>Экспериментальные наблюдения</p1>
+    <p>В ряде исследований (включая работы 1970-х годов) испытуемым предлагалось выбрать «случайное» число из заданного диапазона (например, от 1 до 10).
+        </p>
+      <p>Распределение оказалось неравномерным:</p>
+
+        <div class="formula">P(7)≈0.25−0.35</div>
+      <p>при том, что при истинной случайности:</p>
+        <div class="formula"> 
+          P(n)=10, n∈[1,10]        
+        </div>
+      <img src="images/rrhyegpteduueqqw4ohla5c-jvg.gif" alt="Гистограмма распределения"class="img-graph">
+      <p>Это свидетельствует о систематическом отклонении от равномерного распределения.</p>
+
+  </section>
+
+  <!-- Content block -->
+  <section class="block container">
+    <p1>Когнитивные механизмы</p1>
+    <p>Настоящая случайность появляется только на квантовом уровне.</p>
+    <p>Человеческий мозг стремится избегать:</p>
+      <p>* крайних значений (1, 10)</p>
+      <p>* симметричных структур</p>
+      <p>* повторяющихся шаблонов</p>
+    <p>Можно условно описать «психологическую случайность» функцией:</p>
+        <div class="formula">
+          Random(n)=f(n,C,B)
+        </div>
+    <p>где:</p>
+        <p>n — выбранное число</p>
+        <p>C — культурные факторы</p>
+        <p>B — когнитивные искажения</p>
+    <p>Таким образом, выбор не является случайным, а представляет собой псевдослучайный процесс с сильным смещением.</p> 
+      </section>
+
+    <section id="fiz"></section>
+  <section class="block container">
+        
+    <h2>Классическая физика и детерминизм</h2>  
+          <p1>Модель подбрасывания монеты</p1>
+          <p>Подбрасывание монеты часто рассматривается как пример случайности.</p>
+          <p>Однако физически это детерминированная система.</p>
+        <p>Движение монеты можно описать через уравнения:</p>
+        <div class="formula">
+          F=ma      
+        </div>
+        <div class="formula">
+          τ=Iα        
+        </div>
+        <p>где:</p>
+        <p>F — сила</p>
+        <p>τ — момент силы</p>
+        <p>I — момент инерции</p>
+        <p>α — угловое ускорение</p>
+        <p>Итоговое состояние зависит от начальных условий:</p>
+        <div class="formula">
+          Sfinal=f(v0,ω0,h,θ,t)        
+        </div>
+        <p>Если все параметры известны, результат можно предсказать.</p>
+  </section>
       <section>
         <section class="block container">
-          <h1>Псевдослучайность в вычислениях</h1>
-          <p class="spacer"></p>
-          <p1>Алгоритмическая генерация</p1>
-          <p class="spacer"></p>
-          <p>Компьютеры не способны генерировать истинную случайность без внешнего источника. Вместо этого используются псевдослучайные генераторы</p>
-          <p>Пример — линейный конгруэнтный генератор:</p>
+          <p1>Детерминизм</p1>
+          <p>Классическая механика утверждает:</p>
+          <div class="quote">
+          при полном знании начальных условий 
+            будущее системы полностью определено          
+          </div>
+        <p>Это можно выразить как:</p>
           <div class="formula">
-            Xn+1=(aXn+c)modm            
+            X(t)=F(X0,t)
           </div>
           <p>где:</p>
-          <p>X — текущее значение</p>
-          <p>a,c,m — параметры генератора</p>
-           <p>Нажми, чтобы сгенерировать псевдослучайное число:</p>
-           <button onclick="showRandom('output')">Сгенерировать</button>
-            <pre id="output"></pre>
-          <!-- Делаем функцию глобальной -->
-          <script type="module">
-          import { showRandom } from './js/cubic.js';
-          window.showRandom = showRandom;
-            </script>
+          <p>X — начальное состояние</p>
+          <p>X(t) — состояние в момент времени</p>
+          <p>Следовательно, случайность в макромире — это следствие неполного знания, а не фундаментальное свойство.</p>
+          
+      </section>
 
-
-            <p class="spacer"></p>
-
-            <p1>Свойства псевдослучайности:</p1>
-          <p class="spacer"></p>
-            <p>периодичность</p>
-            <p>зависимость от начального значения (seed)</p>
-            <p>воспроизводимость</p>
-            <p>Формально:</p>
-            <div class="formula">
-              Rpseudo(t)=f(seed,t)                          
-            </div>
-            <p>Это означает, что при одинаковом seed последовательность полностью повторяется.</p>
-            <p1>Практическое применение</p1>
-            <p>игры</p>
-            <p>моделирование (Monte Carlo)</p>
-            <p>криптография (с дополнительными источниками энтропии)</p>
-</section>
-
-  <section id="quant"></section>
+    <section id="pseudorandom"></section>
         <section>
           <section class="block container">
-            <h1>Квантовая случайность</h1>
-            <p1>Принцип неопределённости</p1>
-             <p>В квантовой механике действует принцип:</p>
-          <div class="formula">
-            Δx⋅Δp≥1/2ℏ            
-          </div>
-          <p>Это означает невозможность точного одновременного измерения координаты и импульса.</p>
-            <div class="spacer">              
-            </div>
-          <p1>Волновая функция</p1>
-          <p>Состояние системы описывается волновой функцией:</p>
-          <div class="formula">
-            Ψ(x,t)           
-          </div>
-          <p>Вероятность нахождения частицы:</p>
-          <div class="formula">
-                  P(x)=∣Ψ(x)∣^2
-          </div>
-          <p1>Коллапс волновой функции</p1>
-          <p>При измерении происходит</p>
-          <div class="formula">
-            Ψ→Ψi            
-          </div>
-          <p>результат не предопределён, а выбирается случайно согласно распределению вероятностей.</p>
-          <p1>Истинный рандом</p1>
-            <p>В отличие от классических систем:</p>
+            <h1>Псевдослучайность в вычислениях</h1>
+            <p class="spacer"></p>
+            <p1>Алгоритмическая генерация</p1>
+            <p class="spacer"></p>
+            <p>Компьютеры не способны генерировать истинную случайность без внешнего источника. Вместо этого используются псевдослучайные генераторы</p>
+            <p>Пример — линейный конгруэнтный генератор:</p>
             <div class="formula">
-              Rquantum &ne;f(X0)              
+              Xn+1=(aXn+c)modm            
             </div>
-            <p>результат принципиально непредсказуем, даже при полном знании системы.</p>
-        </section>
-<section>
-            <section class="block container">
-              <h1>Заключение</h1>
-              <p>Случайность не является однородным понятием. Она проявляется по-разному в зависимости от уровня рассмотрения:</p>
-              <p>в человеческом мышлении она искажена когнитивными механизмами</p>
-              <p>в классической физике она является иллюзией, вызванной сложностью системы</p>
-              <p>в вычислительных системах она моделируется алгоритмически</p>
-              <p>в квантовой механике она является фундаментальным свойством природы</p>
-              <p>Таким образом, можно сделать общий вывод:</p>
+            <p>где:</p>
+            <p>X — текущее значение</p>
+            <p>a,c,m — параметры генератора</p>
+            <p>Нажми, чтобы сгенерировать псевдослучайное число:</p>
+            <button onclick="showRandom('output')">Сгенерировать</button>
+              <pre id="output"></pre>
+            <!-- Делаем функцию глобальной -->
+            <script type="module">
+            import { showRandom } from './js/cubic.js';
+            window.showRandom = showRandom;
+              </script>
+
+
+              <p class="spacer"></p>
+
+              <p1>Свойства псевдослучайности:</p1>
+            <p class="spacer"></p>
+              <p>периодичность</p>
+              <p>зависимость от начального значения (seed)</p>
+              <p>воспроизводимость</p>
+              <p>Формально:</p>
               <div class="formula">
-                Randomness=f(knowledge,system scale,model)                
+                Rpseudo(t)=f(seed,t)                          
               </div>
-              <p>Полное понимание случайности требует междисциплинарного подхода и остаётся одной из ключевых проблем современной науки.</p>
+              <p>Это означает, что при одинаковом seed последовательность полностью повторяется.</p>
+              <p1>Практическое применение</p1>
+              <p>игры</p>
+              <p>моделирование (Monte Carlo)</p>
+              <p>криптография (с дополнительными источниками энтропии)</p>
+  </section>
 
+    <section id="quant"></section>
+          <section>
+            <section class="block container">
+              <h1>Квантовая случайность</h1>
+              <p1>Принцип неопределённости</p1>
+              <p>В квантовой механике действует принцип:</p>
+            <div class="formula">
+              Δx⋅Δp≥1/2ℏ            
+            </div>
+            <p>Это означает невозможность точного одновременного измерения координаты и импульса.</p>
+              <div class="spacer">              
+              </div>
+            <p1>Волновая функция</p1>
+            <p>Состояние системы описывается волновой функцией:</p>
+            <div class="formula">
+              Ψ(x,t)           
+            </div>
+            <p>Вероятность нахождения частицы:</p>
+            <div class="formula">
+                    P(x)=∣Ψ(x)∣^2
+            </div>
+            <p1>Коллапс волновой функции</p1>
+            <p>При измерении происходит</p>
+            <div class="formula">
+              Ψ→Ψi            
+            </div>
+            <p>результат не предопределён, а выбирается случайно согласно распределению вероятностей.</p>
+            <p1>Истинный рандом</p1>
+              <p>В отличие от классических систем:</p>
+              <div class="formula">
+                Rquantum &ne;f(X0)              
+              </div>
+              <p>результат принципиально непредсказуем, даже при полном знании системы.</p>
           </section>
-            <!--script to open fortuna-->
-<!-- КНОПКА -->
-    <button onclick="toggleModal()">Открыть / Закрыть</button>
+  <section>
+              <section class="block container">
+                <h1>Заключение</h1>
+                <p>Случайность не является однородным понятием. Она проявляется по-разному в зависимости от уровня рассмотрения:</p>
+                <p>в человеческом мышлении она искажена когнитивными механизмами</p>
+                <p>в классической физике она является иллюзией, вызванной сложностью системы</p>
+                <p>в вычислительных системах она моделируется алгоритмически</p>
+                <p>в квантовой механике она является фундаментальным свойством природы</p>
+                <p>Таким образом, можно сделать общий вывод:</p>
+                <div class="formula">
+                  Randomness=f(knowledge,system scale,model)                
+                </div>
+                <p>Полное понимание случайности требует междисциплинарного подхода и остаётся одной из ключевых проблем современной науки.</p>
 
-<div id="modalOverlay" style="display: none;">
-  <div class="modalBox"></div>
-    
-      <h2 class="modalTitle">Заголовок модалки</h2>
-    <p class="modalText">Вот это текст, который можно стилизовать отдельно</p>
-    <button id="closebtn">Закрыть</button>
-  </div>
+            </section>
+              <!--script to open fortuna-->
+  <!-- КНОПКА -->
+  <!-- Кнопка открытия -->
+  <button id="openBtn">Мне повезет!</button>
+
+  <!-- Модальное окно -->
+  <div id="modalOverlay" style="display: none;">
+    <div class="modalBox">
+      <h2 class="modalTitle">Испытай Удачу!!!</h2>
+      <p class="modalText">Вот это текст, который можно стилизовать отдельно</p>
+      <button class="btnfort" id="closeBtn">❌</button>
+
+        
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                    <td>
+                        <div class="power_controls">
+                            <br />
+                            <br />
+                            <table class="power" cellpadding="10" cellspacing="0">
+                                <tr>
+                                    <th align="center">Power</th>
+                                </tr>
+                                <tr>
+                                    <td width="78" align="center" id="pw3" onClick="powerSelected(3);">High</td>
+                                </tr>
+                                <tr>
+                                    <td align="center" id="pw2" onClick="powerSelected(2);">Med</td>
+                                </tr>
+                                <tr>
+                                    <td align="center" id="pw1" onClick="powerSelected(1);">Low</td>
+                                </tr>
+                            </table>
+                            <br />
+                            <img id="spin_button" src="fornute/spin_off.png" alt="Spin" onClick="startSpin();" />
+                            <br /><br />
+                            &nbsp;&nbsp;<a href="#" onClick="resetWheel(); return false;">Play Again</a><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(reset)
+                        </div>
+                    </td>
+                    <td width="438" height="582" class="the_wheel" align="center" valign="center">
+                        <canvas id="canvas" width="434" height="434">
+                            <p style="{color: white}" align="center">Sorry, your browser doesn't support canvas. Please try another.</p>
+                        </canvas>
+                    </td>
+                </tr>
+            </table>
+        <script>
+            // Create new wheel object specifying the parameters at creation time.
+            let theWheel = new Winwheel({
+                'numSegments'  : 8,     // Specify number of segments.
+                'outerRadius'  : 212,   // Set outer radius so wheel fits inside the background.
+                'textFontSize' : 28,    // Set font size as desired.
+                'segments'     :        // Define segments including colour and text.
+                [
+                   {'fillStyle' : '#eae56f', 'text' : 'Prize 1'},
+                   {'fillStyle' : '#89f26e', 'text' : 'Prize 2'},
+                   {'fillStyle' : '#7de6ef', 'text' : 'Prize 3'},
+                   {'fillStyle' : '#e7706f', 'text' : 'Prize 4'},
+                   {'fillStyle' : '#eae56f', 'text' : 'Prize 5'},
+                   {'fillStyle' : '#89f26e', 'text' : 'Prize 6'},
+                   {'fillStyle' : '#7de6ef', 'text' : 'Prize 7'},
+                   {'fillStyle' : '#e7706f', 'text' : 'Prize 8'}
+                ],
+                'animation' :           // Specify the animation to use.
+                {
+                    'type'     : 'spinToStop',
+                    'duration' : 15,
+                    'spins'    : 8,
+                    'callbackFinished' : alertPrize,
+                    'callbackSound'    : playSound,   // Function to call when the tick sound is to be triggered.
+                    'soundTrigger'     : 'pin'        // Specify pins are to trigger the sound, the other option is 'segment'.
+                },
+                'pins' :
+                {
+                    'number' : 16   // Number of pins. They space evenly around the wheel.
+                }
+            });
+
+            // -----------------------------------------------------------------
+            // This function is called when the segment under the prize pointer changes
+            // we can play a small tick sound here like you would expect on real prizewheels.
+            // -----------------------------------------------------------------
+            let audio = new Audio('tick.mp3');  // Create audio object and load tick.mp3 file.
+
+            function playSound()
+            {
+                // Stop and rewind the sound if it already happens to be playing.
+                audio.pause();
+                audio.currentTime = 0;
+
+                // Play the sound.
+                audio.play();
+            }
+
+            // -------------------------------------------------------
+            // Called when the spin animation has finished by the callback feature of the wheel because I specified callback in the parameters
+            // note the indicated segment is passed in as a parmeter as 99% of the time you will want to know this to inform the user of their prize.
+            // -------------------------------------------------------
+            function alertPrize(indicatedSegment)
+            {
+                // Do basic alert of the segment text.
+                // You would probably want to do something more interesting with this information.
+                alert("You have won " + indicatedSegment.text);
+            }
+
+            // =======================================================================================================================
+            // Code below for the power controls etc which is entirely optional. You can spin the wheel simply by
+            // calling theWheel.startAnimation();
+            // =======================================================================================================================
+            let wheelPower    = 0;
+            let wheelSpinning = false;
+
+            // -------------------------------------------------------
+            // Function to handle the onClick on the power buttons.
+            // -------------------------------------------------------
+            function powerSelected(powerLevel)
+            {
+                // Ensure that power can't be changed while wheel is spinning.
+                if (wheelSpinning == false) {
+                    // Reset all to grey incase this is not the first time the user has selected the power.
+                    document.getElementById('pw1').className = "";
+                    document.getElementById('pw2').className = "";
+                    document.getElementById('pw3').className = "";
+
+                    // Now light up all cells below-and-including the one selected by changing the class.
+                    if (powerLevel >= 1) {
+                        document.getElementById('pw1').className = "pw1";
+                    }
+
+                    if (powerLevel >= 2) {
+                        document.getElementById('pw2').className = "pw2";
+                    }
+
+                    if (powerLevel >= 3) {
+                        document.getElementById('pw3').className = "pw3";
+                    }
+
+                    // Set wheelPower var used when spin button is clicked.
+                    wheelPower = powerLevel;
+
+                    // Light up the spin button by changing it's source image and adding a clickable class to it.
+                    document.getElementById('spin_button').src = "spin_on.png";
+                    document.getElementById('spin_button').className = "clickable";
+                }
+            }
+
+            // -------------------------------------------------------
+            // Click handler for spin button.
+            // -------------------------------------------------------
+            function startSpin()
+            {
+                // Ensure that spinning can't be clicked again while already running.
+                if (wheelSpinning == false) {
+                    // Based on the power level selected adjust the number of spins for the wheel, the more times is has
+                    // to rotate with the duration of the animation the quicker the wheel spins.
+                    if (wheelPower == 1) {
+                        theWheel.animation.spins = 3;
+                    } else if (wheelPower == 2) {
+                        theWheel.animation.spins = 8;
+                    } else if (wheelPower == 3) {
+                        theWheel.animation.spins = 15;
+                    }
+
+                    // Disable the spin button so can't click again while wheel is spinning.
+                    document.getElementById('spin_button').src       = "spin_off.png";
+                    document.getElementById('spin_button').className = "";
+
+                    // Begin the spin animation by calling startAnimation on the wheel object.
+                    theWheel.startAnimation();
+
+                    // Set to true so that power can't be changed and spin button re-enabled during
+                    // the current animation. The user will have to reset before spinning again.
+                    wheelSpinning = true;
+                }
+            }
+
+            // -------------------------------------------------------
+            // Function for reset button.
+            // -------------------------------------------------------
+            function resetWheel()
+            {
+                theWheel.stopAnimation(false);  // Stop the animation, false as param so does not call callback function.
+                theWheel.rotationAngle = 0;     // Re-set the wheel angle to 0 degrees.
+                theWheel.draw();                // Call draw to render changes to the wheel.
+
+                document.getElementById('pw1').className = "";  // Remove all colours from the power level indicators.
+                document.getElementById('pw2').className = "";
+                document.getElementById('pw3').className = "";
+
+                wheelSpinning = false;          // Reset to false to power buttons and spin can be clicked again.
+            }
+        </script>
 </div>
-
-<script>
-function toggleModal() {
-  let modal = document.getElementById("modalOverlay");
-
-  if (modal.style.display === "none") {
-    modal.style.display = "block";
-  } else {
-    modal.style.display = "none";
-  }
-}
-</script>
-
-</body>
+  </div>
+  </body>
 </html>

@@ -1,26 +1,49 @@
 #modalOverlay {
-  position: fixed;          /* фиксируем по экрану */
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%;              /* весь экран */
+  width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.5); /* затемнение */
-  
-  display: flex;            /* flex для центрирования */
-  justify-content: center;  /* горизонтально по центру */
-  align-items: center;      /* вертикально по центру */
-  
-  z-index: 1000;            /* поверх всего остального */
+  background: rgba(0,0,0,0.5);
+
+  display: flex;            
+  justify-content: center;  
+  align-items: center;      
+
+  z-index: 1000;            
 }
 
 .modalBox {
-  position: fixed;
-  display: flex;
-  justify-content: center;
-
   background: white;
-  padding: 70px;
+  padding: 300px 90px;
   border-radius: 10px;
-  width: 300px;             /* ширина модалки */
+  width: 570px;            
   text-align: center;
+  position: relative;
+
 }
+.modalTitle {
+  font-size: 30px;
+  color: #f5b642;
+position: absolute;
+    top: 26px;
+  right: 0px;
+  left: 0px;
+
+}
+.btnfort {
+    padding: 10px 10px;
+  font-size: 24px;
+  position: absolute;
+  top: 1px;
+  right: 20px;
+
+  
+}
+background: conic-gradient(
+  red 0deg 45deg,
+  blue 45deg 90deg,
+  green 90deg 135deg,
+  yellow 135deg 180deg,
+  ...
+);
