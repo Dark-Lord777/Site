@@ -10,6 +10,7 @@
 
 /* Base styles */
 body {
+  padding-top: 30px;
   font-family: 'Roboto Mono', monospace;
   color: #fff;
 }
@@ -34,14 +35,25 @@ body {
 
 /* Header layout */
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(90deg, #0d0d17, #0b1223, #0f2034, #711f2d);
+  backdrop-filter: blur(10px);
   display: flex; /* enables flexbox */
   justify-content: space-between; /* logo left, nav right */
   align-items: center; /* vertical alignment */
-  padding: 20px 0;
+  padding: 18px 0;
+  z-index: 100;
 }
 
 /* Logo styling */
 .logo {
+  position: fixed;
+  left: 15px;
+
   font-size: 20px;
   font-weight: bold;
 }
@@ -51,6 +63,27 @@ nav ul {
   display: flex; /* horizontal menu */
   gap: 20px; /* space between items */
   list-style: none; /* removes bullets */
+}
+nav ul li {
+ background: linear-gradient(135deg, #b00909 0%, #711f2d 100%);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 10px 20px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+
+}
+nav ul li:hover {
+  transform: translateX(4px);
+  transform: translateY(-3px);
+}
+nav ul li a {
+  color: #fff;
+
+}
+
+nav ul li:active {
+  border-bottom: 2px solid #e43f5a;
+//  color: #fff;
 }
 
 /* Hero section */
