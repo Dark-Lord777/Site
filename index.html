@@ -6,11 +6,14 @@
   <title>Случайность</title>
 
   <!-- Linking external CSS file -->
+    <<link rel="" type="" href="">
   <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet"  href="css/stylecubic.css">
     <link rel="stylesheet"  href="css/effectscroll.css">
+    <link rel="stylesheet"  href="css/fortuna.css">
       <script type="module" src="js/cubic.js"></script>
     <script type="module" src="js/effectscroll.js"></script>
+    <script type="module" src="js/fortuna.js"></script>
 
 </head>
 
@@ -24,8 +27,8 @@
   
   <!-- Logo / site name -->
   <span class="logo">Random</span>
-
-  <!-- Navigation menu -->
+    
+    <!-- Navigation menu -->
   <nav>
     <ul>
       <li><a href="#main">Главная</a></li>
@@ -244,6 +247,30 @@
               <p>Полное понимание случайности требует междисциплинарного подхода и остаётся одной из ключевых проблем современной науки.</p>
 
           </section>
+            <!--script to open fortuna-->
+<!-- КНОПКА -->
+    <button onclick="toggleModal()">Открыть / Закрыть</button>
+
+<div id="modalOverlay" style="display: none;">
+  <div class="modalBox"></div>
+    
+      <h2 class="modalTitle">Заголовок модалки</h2>
+    <p class="modalText">Вот это текст, который можно стилизовать отдельно</p>
+    <button id="closebtn">Закрыть</button>
+  </div>
+</div>
+
+<script>
+function toggleModal() {
+  let modal = document.getElementById("modalOverlay");
+
+  if (modal.style.display === "none") {
+    modal.style.display = "block";
+  } else {
+    modal.style.display = "none";
+  }
+}
+</script>
 
 </body>
 </html>
