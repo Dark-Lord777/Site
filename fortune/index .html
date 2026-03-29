@@ -10,13 +10,17 @@
   <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet"  href="css/stylecubic.css">
     <link rel="stylesheet"  href="css/effectscroll.css">
-    <<link rel="stylesheet" href="fortune/main.css">    
+    <!--link rel="stylesheet" href="fortune/main.css"-->    
       <script type="module" src="js/cubic.js"></script>
     <script type="module" src="js/effectscroll.js"></script>
     <script type="module" src="js/fortuna.js"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-    <script  src="fortune/Winwheel.js"></script>
+    <!--script type="module" src="fortune/Winwheel.js"></script-->
+    
+        <script type="text/javascript" src="Winwheel.js"></script>
 
+        <link rel="stylesheet" href="main.css"" />
+
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
 
 
 
@@ -264,12 +268,30 @@
       <p class="modalText">Вот это текст, который можно стилизовать отдельно</p>
       <button class="btnfort" id="closeBtn">❌</button>
 
-
-                <!--  </div>
-        </div> -->
-        
+      </div>
+        </div>
             <table cellpadding="0" cellspacing="0" border="0">
-                            <img id="spin_button" src="fortune/spin_off.png" alt="Spin" onClick="startSpin();" />
+                <tr>
+                    <td>
+                        <div class="power_controls">
+                            <br />
+                            <br />
+                            <table class="power" cellpadding="10" cellspacing="0">
+                                <tr>
+                                    <th align="center">Power</th>
+                                </tr>
+                                <tr>
+                                    <td width="78" align="center" id="pw3" onClick="powerSelected(3);">High</td>
+                                </tr>
+                                <tr>
+                                    <td align="center" id="pw2" onClick="powerSelected(2);">Med</td>
+                                </tr>
+                                <tr>
+                                    <td align="center" id="pw1" onClick="powerSelected(1);">Low</td>
+                                </tr>
+                            </table>
+                            <br />
+                            <img id="spin_button" src="fornute/spin_off.png" alt="Spin" onClick="startSpin();" />
                             <br /><br />
                             &nbsp;&nbsp;<a href="#" onClick="resetWheel(); return false;">Play Again</a><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(reset)
                         </div>
@@ -317,7 +339,7 @@
             // This function is called when the segment under the prize pointer changes
             // we can play a small tick sound here like you would expect on real prizewheels.
             // -----------------------------------------------------------------
-            let audio = new Audio('fortune/tick.mp3');  // Create audio object and load tick.mp3 file.
+            let audio = new Audio('tick.mp3');  // Create audio object and load tick.mp3 file.
 
             function playSound()
             {
@@ -376,7 +398,7 @@
                     wheelPower = powerLevel;
 
                     // Light up the spin button by changing it's source image and adding a clickable class to it.
-                    document.getElementById('spin_button').src = "fortune/spin_on.png";
+                    document.getElementById('spin_button').src = "spin_on.png";
                     document.getElementById('spin_button').className = "clickable";
                 }
             }
@@ -399,14 +421,15 @@
                     }
 
                     // Disable the spin button so can't click again while wheel is spinning.
-                    document.getElementById('spin_button').src       = "fortune/spin_off.png";
+                    document.getElementById('spin_button').src       = "spin_off.png";
                     document.getElementById('spin_button').className = "";
 
                     // Begin the spin animation by calling startAnimation on the wheel object.
                     theWheel.startAnimation();
 
                     // Set to true so that power can't be changed and spin button re-enabled during
-                    // the current animation. The user will have to reset      wheelSpinning = true;
+                    // the current animation. The user will have to reset before spinning again.
+                    wheelSpinning = true;
                 }
             }
 
@@ -426,7 +449,5 @@
                 wheelSpinning = false;          // Reset to false to power buttons and spin can be clicked again.
             }
         </script>
-    </div>
-    </div>
   </body>
 </html>
