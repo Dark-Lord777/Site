@@ -1,0 +1,26 @@
+#modalOverlay {
+  position: fixed;          /* фиксируем по экрану */
+  top: 0;
+  left: 0;
+  width: 100%;              /* весь экран */
+  height: 100%;
+  background: rgba(0,0,0,0.5); /* затемнение */
+  
+  display: flex;            /* flex для центрирования */
+  justify-content: center;  /* горизонтально по центру */
+  align-items: center;      /* вертикально по центру */
+  
+  z-index: 1000;            /* поверх всего остального */
+}
+
+.modalBox {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+
+  background: white;
+  padding: 70px;
+  border-radius: 10px;
+  width: 300px;             /* ширина модалки */
+  text-align: center;
+}
