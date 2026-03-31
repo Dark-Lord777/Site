@@ -249,21 +249,20 @@
           </section>
             <!--script to open fortuna-->
 <!-- КНОПКА -->
-    <button onclick="toggleModal()">Открыть / Закрыть</button>
+<!-- КНОПКА ДЛЯ ОТКРЫТИЯ МОДАЛКИ -->
+<button onclick="toggleModal()">Открыть / Закрыть</button>
 
+<!-- МОДАЛЬНОЕ ОКНО -->
 <div id="modalOverlay" style="display: none;">
-  <div class="modalBox"></div>
-    
-      <h2 class="modalTitle">Заголовок модалки</h2>
+  <div class="modalBox">
+    <h2 class="modalTitle">Заголовок модалки</h2>
     <p class="modalText">Вот это текст, который можно стилизовать отдельно</p>
-    <button id="closebtn">Закрыть</button>
+    <button class="btnfort" onclick="toggleModal()">Закрыть</button>
   </div>
 </div>
-
-<script>
+            <script>
 function toggleModal() {
   let modal = document.getElementById("modalOverlay");
-
   if (modal.style.display === "none") {
     modal.style.display = "block";
   } else {
@@ -271,6 +270,5 @@ function toggleModal() {
   }
 }
 </script>
-
 </body>
 </html>
