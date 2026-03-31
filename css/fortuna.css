@@ -1,52 +1,46 @@
-
- //copy from other comit
+/* css/fortuna.css */
 #modalOverlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.5);
-
-  display: flex;            
-  justify-content: center;  
-  align-items: center;      
-
-  z-index: 1000;            
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
 
 .modalBox {
   background: white;
-  padding: 300px 90px;
+  padding: 30px 40px;
   border-radius: 10px;
-  width: 570px;            
+  width: 400px;
   text-align: center;
   position: relative;
-
 }
+
 .modalTitle {
-  font-size: 30px;
-  color: #f5b642;
-position: absolute;
-    top: 26px;
-  right: 0px;
-  left: 0px;
-
-}
-.btnfort {
-    padding: 10px 10px;
   font-size: 24px;
-  position: absolute;
-  top: 1px;
-  right: 20px;
-
-  
+  color: #f5b642;
+  margin-bottom: 15px;
 }
-background: conic-gradient(
-  red 0deg 45deg,
-  blue 45deg 90deg,
-  green 90deg 135deg,
-  yellow 135deg 180deg,
-  ...
-);
 
+.modalText {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.btnfort {
+  padding: 10px 20px;
+  font-size: 18px;
+  background: #f5b642;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btnfort:hover {
+  background: #e0a12e;
+}
