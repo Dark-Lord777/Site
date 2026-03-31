@@ -13,9 +13,9 @@
 
 .modalBox {
   background: white;
-  padding: 300px 90px;   /* большие внутренние отступы */
+  padding: 300px 90px;   /* большие внутренние отступы высота*/
   border-radius: 10px;
-  width: 570px;
+  width: 570px;    /*ширина */
   text-align: center;
   position: relative;    /* обязательно для абсолютного позиционирования дочерних элементов */
 }
@@ -45,3 +45,5 @@
 .btnfort:hover {
   background: #e0a12e;
 }
+
+

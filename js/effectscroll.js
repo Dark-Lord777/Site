@@ -1,5 +1,5 @@
 // Выбираем все текстовые блоки
-const faders = document.querySelectorAll('p, p1, h1, h2, h3, h4, h5, h6, .formula, .quote, img, button');
+const faders = document.querySelectorAll('p, p1, h1, h2, h3, h4, h5, h6, .formula, .quote, img, ');
 
 // Параметры наблюдателя
 const appearOptions = {
