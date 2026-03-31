@@ -46,4 +46,8 @@
   background: #e0a12e;
 }
 
-
+#wheelContainer {
+width: 500px;
+height: 500px;
+margin: 20px;
+}
