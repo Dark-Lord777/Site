@@ -1,7 +1,7 @@
 // js/cubicjs
 
 
-// Псевдослучайный генератор
+// Pseudo-random generator 
 function pseudoRandom(seed = Date.now()) {
     //(LCG)
     let a = 1664525;
@@ -11,21 +11,21 @@ function pseudoRandom(seed = Date.now()) {
     return seed;
 }
 
-// Генерация случайного числа 1-100
+// Generations random numbrer 1-100
 function generateRandom() {
     let seed = Date.now() % 1000; // пример начального значения (seed)
     let rand = pseudoRandom(seed) % 100 + 1;
     return rand;
 }
 
-// Обновление блока вывода на сайте
+// Update the block outputs on site
 function showRandom(id) {
     const number = generateRandom();
     const output = document.getElementById(id);
     if (output) {
-        output.innerText = `Псевдослучайное число: ${number}`;
+        output.innerText = `Pseudo-random number: ${number}`;
     }
 }
 
-// Экспорт функции
+//Export function 
 export { generateRandom, showRandom };

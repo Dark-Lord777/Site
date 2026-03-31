@@ -54,21 +54,18 @@ header {
   position: fixed;
   left: 15px;
   background: linear-gradient(135deg, #b00909 0%, #711f2d 100%);
-
-  transition: all 0.3s ease;
-
-  transform: translateX(4px);
-  transform: translateY(-3px);
-
   border: none;
   border-radius: 8px;
   font-size: 18px;
   cursor: pointer;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  transition: background 0.2s;
-
   font-size: 20px;
   font-weight: bold;
+  transition: all 0.3s ease;
+}
+.logo:hover {
+  transform: translateX(4px);
+  transform: translateY(-3px);
 }
 
 /* Navigation list */
@@ -187,12 +184,12 @@ nav ul li:active {
 }
 
 .img-graph {
-  display: block;          /* убираем встроенный inline */
-  margin: 20px auto;       /* центр по горизонтали */
-  max-width: 90%;          /* адаптивная ширина */
-  height: auto;            /* сохраняем пропорции */
-  border: 2px solid #fff;  /* рамка, если хочешь */
-  border-radius: 8px;      /* скругление углов */
+  display: block;        
+  margin: 20px auto;    
+  max-width: 90%;      
+  height: auto;           
+  border: 2px solid #fff; 
+  border-radius: 8px;      
 
 .image-right { float: right; max-width: 100px; margin-left: 20px; }
 }
