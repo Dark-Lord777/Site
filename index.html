@@ -26,7 +26,6 @@
       </div>
   
   <!-- Logo / site name -->
-      <!--span class="logo">Random</span-->
   <button class="logo" onclick="toggleModal()">Random</button>
     
     <!-- Navigation menu -->
@@ -174,7 +173,7 @@
            <p>Нажми, чтобы сгенерировать псевдослучайное число:</p>
            <button onclick="showRandom('output')">Сгенерировать</button>
             <pre id="output"></pre>
-          <!-- Делаем функцию глобальной -->
+          <!-- Do function global. Use for example algoritmical generation -->
           <script type="module">
           import { showRandom } from './js/cubic.js';
           window.showRandom = showRandom;
@@ -248,13 +247,10 @@
               <p>Полное понимание случайности требует междисциплинарного подхода и остаётся одной из ключевых проблем современной науки.</p>
 
           </section>
-            <!--script to open fortuna-->
-<!-- КНОПКА -->
-<!-- КНОПКА ДЛЯ ОТКРЫТИЯ МОДАЛКИ -->
+            <!--script to open modal-->
             
-    <button class="logo" onclick="toggleModal()"></button> <!--switch this word for other language-->
-
-<!-- МОДАЛЬНОЕ ОКНО -->
+    <button class="logo" onclick="toggleModal()"></button> 
+            <!--modalka. Modal window-->
 <div id="modalOverlay" style="display: none;">
   <div class="modalBox">
     <h2 class="modalTitle">Заголовок модалки</h2>
@@ -262,7 +258,7 @@
     <button class="btnfort" onclick="toggleModal()">❌</button>
   </div>
 </div>
-            <script>
+<script>
 function toggleModal() {
   let modal = document.getElementById("modalOverlay");
   if (modal.style.display === "none") {
