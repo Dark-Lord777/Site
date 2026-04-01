@@ -6,14 +6,28 @@
   <title>Случайность</title>
 
   <!-- Linking external CSS file -->
-    <<link rel="" type="" href="">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="icon" type="image/png" href="./images/icons8-website-32.png">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet"  href="css/stylecubic.css">
     <link rel="stylesheet"  href="css/effectscroll.css">
     <link rel="stylesheet"  href="css/fortuna.css">
       <script type="module" src="js/cubic.js"></script>
     <script type="module" src="js/effectscroll.js"></script>
-  
+    <!--Import wheel fortune. Its not my script. Author https://github.com/KhalyutkinVictor/javaScript-randomWheel  -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
+    <!--link rel="stylesheet" type="text/css" href="style.css"--> <!--выкидываем нафиг. нам ошибки не нужны..-->
+      <script src="./wheel/circles.js"></script>
+    <script src="./wheel/buttons.js"></script>
+    <script src="./wheel/stringIO.js"></script>
+    <script src="./wheel/sketch.js"></script>V
+    <!--end import Victor's dots. And its... I not good in math but there is an error in [circles.js].
+In these lines, an elliptic function is used instead of the standard arctangent function. 
+Since this involves a circle, the math should be different. The original function has a slight margin of error, 
+which can cause the arrow to appear misaligned with the actual result. 
+It should be replaced with [x = centerX + radius * cos(angle)
+y = centerY + radius * sin(angle)] to ensure accuracy."-->  <!--But now i dont rename something in that code/ If code works beter doesnt touch it.-->
 
 </head>
 
@@ -22,8 +36,6 @@
 
 <!-- Header (top navigation area) -->
   <header>
-      <div class="container"> 
-      </div>
   
   <!-- Logo / site name -->
   <button class="logo" onclick="toggleModal()">Random</button>
@@ -255,6 +267,9 @@
   <div class="modalBox">
     <h2 class="modalTitle">Заголовок модалки</h2>
     <p class="modalText">Вот это текст, который можно стилизовать отдельно</p>
+    <h2 class="modalTitle">You lucky today?</h2> <!--title of modalka-->
+     <p class="modalText">Click "add pozition" and click "Roll"</p-->
+       <div id="wheelContainer"></div> <!--import victor's script on modalka-->
     <button class="btnfort" onclick="toggleModal()">❌</button>
   </div>
 </div>
@@ -263,6 +278,7 @@ function toggleModal() {
   let modal = document.getElementById("modalOverlay");
   if (modal.style.display === "none") {
     modal.style.display = "flex";
+    if (typeof initWheel === 'function') initWheel(); // start wheel
   } else {
     modal.style.display = "none";
   }
