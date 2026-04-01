@@ -116,6 +116,9 @@ function roll() {
 
 function mousePressed() {
     if (!canvasCreated) return;
+    // Игнорируем клики вне canvas
+    if (mouseX < 0 || mouseX > width || mouseY < 0 || mouseY > height) return;
+
     if (btnInput.clickCheck() && !rollFlag) {
         inputString();
     }
@@ -125,9 +128,7 @@ function mousePressed() {
         rollSpeed = rollAngle * 0.05;
         rollFlag = true;
     }
-}
-
-function inputString() {
+}function inputString() {
     let str = prompt('Введите название (макс. 10 символов)', 'приз');
     if (str && str.length > 10) str = str.substr(0, 10);
     if (str) {
