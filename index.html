@@ -171,20 +171,20 @@ sistēmas nākotne ir pilnībā noteikta
   <section id="pseudorandom"></section>
       <section>
         <section class="block container">
-          <h1>Псевдослучайность в вычислениях</h1>
+          <h1>Pseido nejaušība skaitļošanā</h1>
           <p class="spacer"></p>
-          <p1>Алгоритмическая генерация</p1>
+          <p1>Algoritmiskā ģenerēšana</p1>
           <p class="spacer"></p>
-          <p>Компьютеры не способны генерировать истинную случайность без внешнего источника. Вместо этого используются псевдослучайные генераторы</p>
-          <p>Пример — линейный конгруэнтный генератор:</p>
+          <p>Datori nespēj ģenerēt patiesu nejaušību bez ārēja avota. Tā vietā tiek izmantoti pseido nejaušo skaitļu ģeneratori.</p>
+          <p>Piemērs — lineārais kongruentais ģenerators:</p>
           <div class="formula">
             Xn+1=(aXn+c)modm            
           </div>
-          <p>где:</p>
-          <p>X — текущее значение</p>
-          <p>a,c,m — параметры генератора</p>
-           <p>Нажми, чтобы сгенерировать псевдослучайное число:</p>
-           <button onclick="showRandom('output')">Сгенерировать</button>
+          <p>kur:</p>
+          <p>X —  pašreizējā vērtība </p>
+          <p>a,c,m — ģeneratora parametri</p>
+           <p>Nospied, lai ģenerētu pseido nejaušu skaitli:</p>
+           <button onclick="showRandom('output')">Generation</button>
             <pre id="output"></pre>
           <!-- Do function global. Use for example algoritmical generation -->
           <script type="module">
@@ -195,20 +195,20 @@ sistēmas nākotne ir pilnībā noteikta
 
             <p class="spacer"></p>
 
-            <p1>Свойства псевдослучайности:</p1>
+            <p1>Pseido nejaušības īpašības:</p1>
           <p class="spacer"></p>
-            <p>периодичность</p>
-            <p>зависимость от начального значения (seed)</p>
-            <p>воспроизводимость</p>
-            <p>Формально:</p>
+            <p>periodiskum</p>
+            <p>atkarība no sākuma vērtības (seed)</p>
+            <p>atkārtojamība</p>
+            <p>Formāli:</p>
             <div class="formula">
               Rpseudo(t)=f(seed,t)                          
             </div>
-            <p>Это означает, что при одинаковом seed последовательность полностью повторяется.</p>
-            <p1>Практическое применение</p1>
-            <p>игры</p>
-            <p>моделирование (Monte Carlo)</p>
-            <p>криптография (с дополнительными источниками энтропии)</p>
+            <p>Tas nozīmē, ka pie vienāda seed secība pilnībā atkārtojas.</p>
+            <p1>Praktiskais pielietojums</p1>
+            <p>spēle</p>
+            <p>modelēšana (Monte Carlo)</p>
+            <p>kriptogrāfija (ar papildu entropijas avotiem)</p>
 </section>
 
   <section id="quant"></section>
