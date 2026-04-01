@@ -51,7 +51,7 @@ header {
 
 /* Logo styling */
 .logo {
-  position: fixed;
+  //position: fixed;
   left: 15px;
   background: linear-gradient(135deg, #b00909 0%, #711f2d 100%);
   border: none;
@@ -190,6 +190,4 @@ nav ul li:active {
   height: auto;           
   border: 2px solid #fff; 
   border-radius: 8px;      
-
-.image-right { float: right; max-width: 100px; margin-left: 20px; }
 }
